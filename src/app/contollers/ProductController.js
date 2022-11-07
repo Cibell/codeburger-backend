@@ -60,7 +60,6 @@ class ProductController {
     try {
       const schema = Yup.object().shape({
         name: Yup.string(),
-        price: Yup.number(),
         category_id: Yup.number(),
         offer: Yup.boolean(),
       })
@@ -71,7 +70,7 @@ class ProductController {
         return response.status(400).json({ error: err.errors })
       }
 
-      const { admim: isAdmin } = await User.findByPk(request.userId)
+      const { admin: isAdmin } = await User.findByPk(request.userId)
 
       if (!isAdmin) {
         return response.status(401).json()
@@ -84,9 +83,8 @@ class ProductController {
       if (!product) {
         return response
           .status(401)
-          .json({ error: 'Make sure your product is correct ' })
+          .json({ error: 'Make sure your product ID is correct' })
       }
-
       let path
       if (request.file) {
         path = request.file.filename
@@ -96,6 +94,7 @@ class ProductController {
 
       await Product.update(
         {
+          // formato de atualização no sequelize
           name,
           price,
           category_id,
