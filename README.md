@@ -1,6 +1,7 @@
 # 💻 Projeto Node.Js Api
-
-
+<p align="center">
+<img src="https://media3.giphy.com/media/IdO85a8gN8HyiiNwhv/giphy.gif?cid=790b761124ba837f794ba627538a8c593b0d967229e027ff&rid=giphy.gif&ct=g" alt="bear" width="800px">
+<p/>
 
 # :speech_balloon: Sobre
 
