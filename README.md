@@ -30,7 +30,7 @@ $ https://github.com/Cibell/codeburger-backend.git
 # Install dependencies
 $ yarn or npm 
 # Run the project
-$ yarn start or npm start 
+$ yarn dev or npm run dev 
 # The server will initialize in the <http://localhost:3001>
 ```
 
